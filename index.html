@@ -119,6 +119,28 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
 .card:hover .card-link .arw{transform:translateX(5px)}
 .card-a{position:absolute;inset:0;z-index:2}
 
+/* DESTAQUE — VALOR REDUZIDO */
+.destaque{padding:20px 0 70px}
+.dq{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);background:var(--green);color:#fff;border-radius:calc(var(--r) + 6px);overflow:hidden;box-shadow:var(--shadow-lg);position:relative}
+.dq-media{position:relative;min-width:0;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:6px;min-height:460px;background:var(--green2)}
+.dq-media img{width:100%;height:100%;min-height:0;object-fit:cover}
+.dq-ribbon{position:absolute;top:22px;left:22px;background:#B23A2E;color:#fff;font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:9px 16px;border-radius:999px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.dq-body{padding:48px 46px;display:flex;flex-direction:column;justify-content:center}
+.dq-body .eyebrow{color:var(--gold2);margin-bottom:12px}
+.dq-body h2{font-size:clamp(32px,3.8vw,48px);color:#fff;margin-bottom:8px}
+.dq-loc{color:rgba(255,255,255,.75);font-size:15px;margin-bottom:24px}
+.dq-price{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.dq-old{font-size:20px;color:rgba(255,255,255,.6);text-decoration:line-through;text-decoration-color:#E0705F;text-decoration-thickness:2px}
+.dq-new{font-family:var(--serif);font-size:clamp(40px,4.6vw,56px);font-weight:600;color:var(--gold2);line-height:1}
+.dq-save{align-self:flex-start;display:inline-block;background:rgba(201,164,92,.16);border:1px solid rgba(201,164,92,.45);color:var(--gold2);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;margin:10px 0 24px}
+.dq-feats{list-style:none;padding:0;margin:0 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:9px 20px;font-size:14.5px;color:rgba(255,255,255,.88)}
+.dq-feats li{padding-left:18px;position:relative}
+.dq-feats li:before{content:"";position:absolute;left:0;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--gold2)}
+.dq-cta{display:flex;gap:12px;flex-wrap:wrap}
+.dq-cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)}
+.dq-note{font-size:12px;color:rgba(255,255,255,.5);margin-top:18px}
+@media (max-width:900px){.dq{grid-template-columns:minmax(0,1fr)}.dq-media{min-height:0;height:320px}.dq-body{padding:34px 26px}.dq-feats{grid-template-columns:1fr}}
+
 /* EXCLUSIVAS */
 .excl{background:var(--sand)}
 .excl .grid{grid-template-columns:repeat(3,1fr)}
@@ -240,6 +262,38 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
     </figure>
   </div>
 </header>
+
+<section class="destaque" id="destaque">
+  <div class="wrap">
+    <article class="dq reveal">
+      <div class="dq-media">
+        <img src="assets/destaque/parqville-fachada.jpg" alt="Fachada da casa no Parqville Jacarandá">
+        <img src="assets/destaque/parqville-gourmet.jpg" alt="Área gourmet com piscina aquecida">
+        <span class="dq-ribbon">Valor reduzido</span>
+      </div>
+      <div class="dq-body">
+        <p class="eyebrow">Exclusiva em destaque</p>
+        <h2>Casa mobiliada no Parqville Jacarandá</h2>
+        <div class="dq-loc">Condomínio fechado · Aparecida de Goiânia/GO</div>
+        <div class="dq-price"><span class="dq-old">R$ 1.590.000</span><span class="dq-new">R$ 1.490.000</span></div>
+        <span class="dq-save">R$ 100 mil a menos no valor de venda</span>
+        <ul class="dq-feats">
+          <li>312 m² de terreno · 180 m² construídos</li>
+          <li>3 suítes, master com closet</li>
+          <li>Piscina privativa aquecida</li>
+          <li>Área gourmet com churrasqueira</li>
+          <li>Energia solar e poço artesiano</li>
+          <li>4 vagas · entregue mobiliada</li>
+        </ul>
+        <div class="dq-cta">
+          <a class="btn btn-gold" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Vi%20no%20seu%20site%20a%20casa%20do%20Parqville%20Jacarand%C3%A1%20com%20valor%20reduzido%20e%20quero%20saber%20mais." target="_blank" rel="noopener">Agendar visita</a>
+          <a class="btn btn-ghost" href="https://thiagoliveiraadv-dev.github.io/casa-parqville-jacaranda/" target="_blank" rel="noopener">Ver fotos e detalhes</a>
+        </div>
+        <p class="dq-note">Valor e disponibilidade sujeitos a confirmação.</p>
+      </div>
+    </article>
+  </div>
+</section>
 
 <section class="stats">
   <div class="wrap">
@@ -882,9 +936,9 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
       </article>
       <article class="card reveal">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/casa-parqville-jacaranda/" target="_blank" rel="noopener"></a>
-        <div class="card-img"><img loading="lazy" src="assets/thumbs/casa-parqville-jacaranda.jpg" alt="Casa Parqville Jacarandá"><span class="card-tag">Exclusiva</span></div>
+        <div class="card-img"><img loading="lazy" src="assets/thumbs/casa-parqville-jacaranda.jpg" alt="Casa Parqville Jacarandá"><span class="card-tag">Valor reduzido</span></div>
         <div class="card-body">
-          <div class="price">R$ 1.590.000</div>
+          <div class="price"><s style="font-size:15px;color:var(--muted);font-weight:400;margin-right:8px">R$ 1.590.000</s>R$ 1.490.000</div>
           <h3>Casa Parqville Jacarandá</h3>
           <div class="card-loc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="14" height="14"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> Casa (térrea), Cond. Res. Parqville Jacarandá, Rua J-14 Qd.16 Lt.16, Jd. Cristal — Aparecida de Goiânia/GO</div>
           <span class="card-link">Ver imóvel <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
