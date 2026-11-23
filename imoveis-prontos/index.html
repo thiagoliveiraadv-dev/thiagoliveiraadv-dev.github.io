@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Imóveis prontos para morar | Thiago Oliveira</title>
+<meta name="description" content="Seleção de imóveis prontos para morar em Goiânia: apartamentos no Setor Bueno, Setor Oeste e Leste Universitário e sobrado no Jardins França.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Imóveis prontos para morar em Goiânia">
+<meta property="og:description" content="Seleção com curadoria: do apartamento de 2 quartos ao sobrado de 4 suítes. Fotos, valores e atendimento direto no WhatsApp.">
+<meta property="og:image" content="https://thiagoliveiraadv-dev.github.io/assets/thumbs/sobrado-jardins-franca.jpg">
+<meta property="og:url" content="https://thiagoliveiraadv-dev.github.io/imoveis-prontos/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#123F33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23123F33'/%3E%3Ctext x='20' y='28' font-family='Georgia,serif' font-size='22' fill='white' text-anchor='middle'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FBF9F5;--paper2:#FFFFFF;--sand:#F3EEE4;--ink:#17140F;--ink2:#3A362E;--muted:#7C766A;
+  --line:#E7E0D2;--line2:#EFE9DC;--green:#123F33;--green2:#0C2F26;--gold:#A9813E;--gold2:#C9A45C;
+  --shadow:0 1px 2px rgba(23,20,15,.04),0 12px 34px rgba(23,20,15,.07);--shadow-lg:0 30px 70px rgba(23,20,15,.14);
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--r:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.lock{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700;margin:0 0 14px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacing:-.01em;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:700;font-size:14.5px;padding:13px 22px;border-radius:100px;cursor:pointer;border:none;transition:.22s;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green2)}
+.btn-wa{background:#1FAF55;color:#fff}.btn-wa:hover{background:#178a43}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}.btn-ghost:hover{border-color:var(--ink)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:rgba(251,249,245,.88);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:12px}
+.brand{display:flex;align-items:center;gap:11px}
+.mono{width:38px;height:38px;border-radius:11px;background:var(--green);color:#fff;display:grid;place-items:center;font-family:var(--serif);font-size:21px;font-weight:600;flex:none}
+.brand b{font-family:var(--serif);font-size:20px;font-weight:600;display:block;line-height:1}
+.brand small{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.nav .btn{padding:10px 18px;font-size:14px}
+
+/* hero */
+.hero{padding:54px 0 26px}
+.hero h1{font-size:clamp(38px,6vw,68px);max-width:820px}
+.hero h1 em{font-style:italic;color:var(--green)}
+.hero p.lead{font-size:18px;color:var(--ink2);max-width:640px;margin:18px 0 0}
+
+/* tabs */
+.bar{position:sticky;top:66px;z-index:30;background:var(--paper);padding:14px 0 12px;border-bottom:1px solid var(--line2)}
+.bar .wrap{display:flex;gap:10px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.tabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;max-width:100%}
+.tabs::-webkit-scrollbar{display:none}
+.chip{font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:100px;border:1.5px solid var(--line);background:transparent;color:var(--ink2);cursor:pointer;transition:.2s;white-space:nowrap}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sort{font-size:13.5px;font-weight:600;color:var(--ink2);border:1.5px solid var(--line);border-radius:100px;padding:8px 14px;background:var(--paper2)}
+
+/* grid */
+.list{padding:30px 0 80px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--paper2);border:1px solid var(--line2);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:.3s;text-align:left;padding:0;color:inherit;font:inherit}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.cimg{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sand)}
+.cimg img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.card:hover .cimg img{transform:scale(1.05)}
+.badge{position:absolute;top:12px;left:12px;background:rgba(251,249,245,.95);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);padding:6px 12px;border-radius:100px}
+.tag{position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 11px;border-radius:100px}
+.count{position:absolute;bottom:12px;right:12px;background:rgba(23,20,15,.62);color:#fff;font-size:12px;font-weight:600;padding:4px 10px;border-radius:100px}
+.cbody{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.old{font-size:13px;color:var(--muted);text-decoration:line-through}
+.price{font-family:var(--serif);font-size:27px;color:var(--green);font-weight:600;line-height:1.1}
+.cbody h3{font-size:23px;margin:8px 0 4px}
+.loc{font-size:13.5px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.loc svg{width:14px;height:14px;flex:none}
+.specs{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 0;padding-top:14px;border-top:1px solid var(--line2);font-size:13.5px;color:var(--ink2);font-weight:600}
+.specs span{display:flex;align-items:center;gap:6px}
+.specs svg{width:16px;height:16px;color:var(--gold)}
+.more{margin-top:16px;font-size:14px;font-weight:700;color:var(--green)}
+
+/* detail sheet */
+.sheet{position:fixed;inset:0;z-index:70;background:var(--paper);overflow-y:auto;transform:translateY(100%);transition:transform .38s cubic-bezier(.2,.7,.2,1);visibility:hidden}
+.sheet.open{transform:none;visibility:visible}
+.sheet-top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:rgba(251,249,245,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line2)}
+.icon-btn{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:var(--paper2);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.icon-btn svg{width:20px;height:20px}
+.sheet-top .t{font-family:var(--serif);font-size:20px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 10px}
+.gal{position:relative;max-width:1200px;margin:0 auto}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.slides::-webkit-scrollbar{display:none}
+.slides img{flex:0 0 100%;width:100%;aspect-ratio:3/2;object-fit:cover;scroll-snap-align:center;background:var(--sand)}
+.gnav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:none;background:rgba(251,249,245,.9);display:grid;place-items:center;cursor:pointer;box-shadow:var(--shadow)}
+.gnav svg{width:20px;height:20px}
+.gprev{left:14px}.gnext{right:14px}
+.gcount{position:absolute;bottom:14px;right:14px;background:rgba(23,20,15,.62);color:#fff;font-size:12.5px;font-weight:600;padding:4px 11px;border-radius:100px}
+.thumbs{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;max-width:1200px;margin:0 auto;scrollbar-width:none}
+.thumbs::-webkit-scrollbar{display:none}
+.thumbs img{width:76px;height:56px;object-fit:cover;border-radius:8px;opacity:.55;cursor:pointer;flex:none;border:2px solid transparent}
+.thumbs img.on{opacity:1;border-color:var(--gold)}
+.dwrap{max-width:900px;margin:0 auto;padding:22px 20px 120px}
+.dwrap h2{font-size:clamp(32px,5vw,48px);margin:6px 0 8px}
+.pbox{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;margin:18px 0 6px}
+.pbox .price{font-size:36px}
+.save{background:#EAF1EC;color:var(--green);font-weight:700;font-size:13px;padding:5px 12px;border-radius:100px;margin-bottom:6px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+.fact{background:var(--paper2);border:1px solid var(--line2);border-radius:14px;padding:14px 12px;text-align:center}
+.fact b{font-family:var(--serif);font-size:26px;color:var(--ink);display:block;line-height:1.1}
+.fact span{font-size:12px;color:var(--muted)}
+.dwrap h4{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:30px 0 12px}
+.intro{font-size:17px;color:var(--ink2)}
+.bul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.bul li{position:relative;padding-left:22px;font-size:15px;color:var(--ink2)}
+.bul li:before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--gold2)}
+.note{font-size:13px;color:var(--muted);margin-top:16px;font-style:italic}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.sig{margin-top:36px;padding:22px;border-radius:var(--r);background:var(--green);color:#fff}
+.sig b{font-family:var(--serif);font-size:24px}
+.sig p{margin:6px 0 0;color:rgba(255,255,255,.78);font-size:14.5px}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:80;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(251,249,245,.95);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:none;gap:10px;align-items:center}
+.sheet.open ~ .dock{display:flex}
+.dock .dp{flex:1;min-width:0}
+.dock .dp small{display:block;font-size:11.5px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dock .dp b{font-family:var(--serif);font-size:22px;color:var(--green)}
+
+/* contato + footer */
+.contato{background:var(--ink);color:#fff;border-radius:28px;margin:0 16px 60px;padding:64px 22px;text-align:center}
+.contato h2{font-size:clamp(30px,5vw,52px)}
+.contato h2 em{color:var(--gold2);font-style:italic}
+.contato p{color:rgba(255,255,255,.72);max-width:520px;margin:14px auto 28px;font-size:17px}
+.footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 90px}
+.footer a{color:var(--ink2);font-weight:600}
+.fab{position:fixed;right:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.4)}
+.fab svg{width:30px;height:30px;fill:#fff}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:100px;font-size:14px;z-index:99;opacity:0;transition:.3s;pointer-events:none}
+.toast.on{opacity:1}
+
+@media(max-width:940px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .bul{grid-template-columns:1fr}
+  .gnav{display:none}
+  .slides img{aspect-ratio:4/3}
+  .nav .btn span{display:none}
+  .hero{padding:36px 0 18px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="brand" href="../"><span class="mono">T</span><span><b>Thiago Oliveira</b><small>Corretor de Imóveis</small></span></a>
+    <a class="btn btn-wa" id="navWa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg><span>Falar no WhatsApp</span></a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Prontos para morar · Goiânia</p>
+    <h1>Imóveis prontos, <em>escolhidos a dedo</em> para você.</h1>
+    <p class="lead">Do apartamento compacto perto das universidades ao sobrado de quatro suítes em condomínio fechado. Toque em um imóvel para ver todas as fotos, os detalhes e falar comigo.</p>
+  </div>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="tabs" id="tabs" role="tablist">
+      <button class="chip active" data-f="all">Todos</button>
+      <button class="chip" data-f="apto">Apartamentos</button>
+      <button class="chip" data-f="casa">Casas</button>
+      <button class="chip" data-f="ate1">Até R$ 1 milhão</button>
+      <button class="chip" data-f="acima1">Acima de R$ 1 milhão</button>
+    </div>
+    <select class="sort" id="sort" aria-label="Ordenar">
+      <option value="default">Destaques</option>
+      <option value="asc">Menor valor</option>
+      <option value="desc">Maior valor</option>
+    </select>
+  </div>
+</div>
+
+<main class="list">
+  <div class="wrap"><div class="grid" id="grid"></div></div>
+</main>
+
+<section class="contato">
+  <p class="eyebrow" style="color:var(--gold2)">Não encontrou o que procura?</p>
+  <h2>Me conte o imóvel <em>ideal</em>.</h2>
+  <p>Tenho acesso a outros imóveis prontos e a lançamentos das principais incorporadoras de Goiânia. Eu faço a busca e te mando só o que vale a visita.</p>
+  <a class="btn btn-wa" style="font-size:16px;padding:15px 28px" target="_blank" rel="noopener" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Vi%20seus%20im%C3%B3veis%20prontos%20e%20quero%20ajuda%20para%20encontrar%20o%20meu."><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Z"/></svg>Quero ajuda na busca</a>
+  <p style="font-size:14px;margin:26px auto 0"><a href="../#portfolio" style="color:var(--gold2);font-weight:700">Ver também os lançamentos →</a></p>
+</section>
+
+<footer class="footer">
+  <p><b>Thiago Oliveira</b> · Corretor de Imóveis · MyBroker · CRECI-GO 105.575E<br>
+  <a href="https://wa.me/5562982709212" target="_blank" rel="noopener">(62) 98270-9212</a> · <a href="https://www.instagram.com/drthiago.advcrim/" target="_blank" rel="noopener">@drthiago.advcrim</a></p>
+  <p style="max-width:560px;margin:10px auto 0;font-size:12px">Valores, áreas e condições sujeitos a confirmação e a alteração sem aviso prévio. Atualizado em novembro de 2026.</p>
+</footer>
+
+<div class="sheet" id="sheet" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="sheet-top">
+    <button class="icon-btn" id="close" aria-label="Voltar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="t" id="sTitle"></div>
+    <button class="icon-btn" id="share" aria-label="Compartilhar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M12 3v12M7 8l5-5 5 5"/></svg></button>
+  </div>
+  <div class="gal">
+    <div class="slides" id="slides"></div>
+    <button class="gnav gprev" id="prev" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="gnav gnext" id="next" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+    <span class="gcount" id="gcount"></span>
+  </div>
+  <div class="thumbs" id="thumbs"></div>
+  <div class="dwrap" id="detail"></div>
+</div>
+<div class="dock" id="dock">
+  <div class="dp"><small id="dName"></small><b id="dPrice"></b></div>
+  <a class="btn btn-wa" id="dWa" target="_blank" rel="noopener">Agendar visita</a>
+</div>
+
+<a class="fab" id="fab" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Vi%20seus%20im%C3%B3veis%20prontos." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.16c-.25.69-1.44 1.32-1.98 1.36-.53.05-1.02.24-3.44-.72-2.9-1.14-4.75-4.1-4.9-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1-2.4c.26-.29.57-.36.76-.36l.55.01c.18 0 .41-.07.64.49.25.59.83 2.03.9 2.18.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.5-.14.14-.29.3-.13.59.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.41.29.14.45.12.62-.07.17-.19.71-.83.9-1.12.19-.29.38-.24.64-.14.26.1 1.67.79 1.96.93.29.14.48.21.55.33.07.12.07.69-.18 1.38Z"/></svg></a>
+<div class="toast" id="toast">Link copiado</div>
+
+<script>
+const WA='https://wa.me/5562982709212?text=';
+const IMOVEIS=[
+ {id:'sobrado-jardins-franca',tipo:'casa',nome:'Sobrado no Jardins França',bairro:'Condomínio Jardins França · Goiânia',
+  preco:4790000,tag:'Alto padrão',n:14,
+  facts:[['394 m²','área construída'],['437 m²','terreno'],['4','suítes'],['4','vagas']],
+  specs:['394 m²','4 suítes','4 vagas'],
+  intro:'Sobrado de arquitetura moderna em condomínio fechado, com fachada voltada para o norte, sala com pé-direito duplo e uma área social que integra sala, cozinha e varanda gourmet. Acabamentos premium e casa entregue com paisagismo adulto e energia solar.',
+  grupos:[
+   ['Piso térreo',['Sala de estar com pé-direito duplo e home cinema','Sala de jantar e lavabo','Escritório, reversível para 5ª suíte','Cozinha integrada à sala e à varanda','Varanda gourmet com churrasqueira a carvão','Área de serviço com dependência, despensa e depósito de gás','Espaço previsto para piscina (a executar)']],
+   ['Piso superior',['4 suítes plenas, todas com closet','Suíte master com amplo closet, sala de banho e varanda frontal']],
+   ['Diferenciais',['Usina fotovoltaica','Ar-condicionado convencional e cassete 4 vias','Móveis e armários planejados','Pisos, revestimentos, louças e metais premium','Projeto luminotécnico em LED implantado','Irrigação automatizada e hidrômetro verde','Paisagismo adulto interno e externo','2 vagas cobertas e 2 descobertas']]],
+  nota:'Móveis de uso familiar não fazem parte da venda.',
+  mapa:'Condomínio Jardins França Goiânia'},
+ {id:'finest-bueno-1702',tipo:'apto',nome:'Finest Bueno · 17º andar',bairro:'Rua T-30 · Setor Bueno · Goiânia',
+  preco:1890000,de:1990000,tag:'Nunca habitado',n:12,
+  facts:[['161 m²','área privativa'],['3','suítes'],['3','vagas'],['17º','andar']],
+  specs:['161 m²','3 suítes','3 vagas'],
+  intro:'Apartamento nunca habitado em prédio novo (2 anos), no 17º andar e com face poente, em frente ao novo colégio WR Jr. Entregue com móveis planejados em 100% dos ambientes e elevador privativo.',
+  grupos:[
+   ['O apartamento',['3 suítes','Cozinha integrada à sala','Sacada com churrasqueira a carvão','Elevador privativo','3 vagas (2 em gaveta e 1 paralela) e escaninho','Lazer completo no condomínio']],
+   ['Diferenciais',['Móveis planejados de alto padrão em todos os ambientes, com garantia de 5 anos (Terra Ambientes)','Projeto luminotécnico','Bancadas em granito','Torre quente, cooktop e coifa']],
+   ['Pagamento',['Aceita interveniente quitante']]],
+  mapa:'Rua T-30 Setor Bueno Goiânia'},
+ {id:'copas-do-bosque',tipo:'apto',nome:'Residencial Copas do Bosque',bairro:'Setor Oeste · em frente ao Bosque dos Buritis',
+  preco:1050000,tag:'Nunca habitado',n:14,
+  facts:[['103 m²','área privativa'],['2','vagas'],['Novo','nunca habitado'],['Pronto','para morar']],
+  specs:['103 m²','2 vagas','Pronto'],
+  intro:'Apartamento novo, nunca habitado, de frente para o Bosque dos Buritis, um dos endereços mais verdes e tradicionais de Goiânia. Varanda com vista para as copas das árvores e prédio com lazer completo.',
+  grupos:[
+   ['O apartamento',['103 m² de área privativa','2 vagas de garagem','Varanda com vista para o Bosque dos Buritis','Pronto para morar']],
+   ['Lazer do condomínio',['Piscina com deck e solário','Lounge externo','Salão de festas','Espaço gourmet','Salão de jogos','Brinquedoteca e playground','Quadra','Academia']]],
+  nota:'Número de quartos e taxa de condomínio: consulte.',
+  mapa:'Bosque dos Buritis Setor Oeste Goiânia'},
+ {id:'dilce-ribeiro',tipo:'apto',nome:'Residencial Dilce Ribeiro',bairro:'Rua T-44 · Setor Bueno · Goiânia',
+  preco:599900,de:645000,tag:'Mobiliado',n:13,
+  facts:[['88 m²','área privativa'],['3','quartos (1 suíte)'],['2','vagas'],['10º','andar']],
+  specs:['88 m²','3 quartos','2 vagas'],
+  intro:'Apartamento mobiliado, nascente, no 10º andar, em uma das regiões mais valorizadas do Setor Bueno. Pronto para morar, com varanda gourmet e vaga ampla para veículo grande.',
+  grupos:[
+   ['O apartamento',['3 quartos, sendo 1 suíte','Face nascente','Mobiliado','Varanda com churrasqueira a carvão','2 vagas: 1 no térreo e 1 ampla no mezanino, que comporta caminhonete grande ou jet ski, conforme as dimensões','Condomínio de R$ 480,00/mês']],
+   ['Lazer do condomínio',['Piscinas adulto e infantil','Salão de festas','Academia','Brinquedoteca']]],
+  mapa:'Rua T-44 Setor Bueno Goiânia'},
+ {id:'leste-universitario',tipo:'apto',nome:'Apartamento no Leste Universitário',bairro:'Setor Leste Universitário · Goiânia',
+  preco:210000,tag:'Ótimo para investir',n:11,
+  facts:[['60 m²','área'],['2','quartos'],['4º','andar'],['R$ 465','condomínio']],
+  specs:['60 m²','2 quartos','Nascente'],
+  intro:'Apartamento de 2 quartos, nascente, em prédio reformado com piscina, a poucos minutos da PUC Goiás, da UFG e do Hospital das Clínicas. Ótimo para morar perto de tudo ou para renda com locação a estudantes.',
+  grupos:[
+   ['O imóvel',['2 quartos','4º andar, face nascente','Sem vaga própria; vaga avulsa para alugar no prédio por R$ 150/mês','Condomínio de R$ 465/mês']],
+   ['O prédio',['Prédio reformado, 10 andares com 4 apartamentos por andar','2 elevadores: social e de serviço','Piscina e espaço com churrasqueira','Portaria em horário comercial (7h às 17h)']],
+   ['Localização',['Próximo à PUC Goiás e à UFG','Perto do Hospital das Clínicas e da Praça Universitária','Comércio, supermercados e farmácias a pé']]],
+  mapa:'Setor Leste Universitário Goiânia'}
+];
+const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+const msg=p=>WA+encodeURIComponent(`Olá, Thiago! Vi o imóvel "${p.nome}" (${brl(p.preco)}) no seu site e quero saber mais. `);
+const visita=p=>WA+encodeURIComponent(`Olá, Thiago! Quero agendar uma visita ao imóvel "${p.nome}". Quais horários você tem?`);
+const img=(p,i)=>`img/${p.id}/${String(i).padStart(2,'0')}.jpg`;
+const pin='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg>';
+const dot='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4 10-10"/></svg>';
+document.getElementById('navWa').href=WA+encodeURIComponent('Olá, Thiago! Vi seus imóveis prontos para morar e quero conversar.');
+
+const grid=document.getElementById('grid');
+let filtro='all',ordem='default';
+function render(){
+  let l=IMOVEIS.filter(p=>filtro==='all'||(filtro==='apto'&&p.tipo==='apto')||(filtro==='casa'&&p.tipo==='casa')||(filtro==='ate1'&&p.preco<=1000000)||(filtro==='acima1'&&p.preco>1000000));
+  if(ordem==='asc')l=[...l].sort((a,b)=>a.preco-b.preco);
+  if(ordem==='desc')l=[...l].sort((a,b)=>b.preco-a.preco);
+  grid.innerHTML=l.map(p=>`
+   <button class="card" data-id="${p.id}" aria-label="Ver ${p.nome}">
+    <div class="cimg"><img loading="lazy" src="${img(p,1)}" alt="${p.nome}"><span class="badge">${p.tipo==='casa'?'Casa':'Apartamento'}</span>${p.tag?`<span class="tag">${p.tag}</span>`:''}<span class="count">${p.n} fotos</span></div>
+    <div class="cbody">
+     ${p.de?`<span class="old">${brl(p.de)}</span>`:''}
+     <div class="price">${brl(p.preco)}</div>
+     <h3>${p.nome}</h3>
+     <div class="loc">${pin}${p.bairro}</div>
+     <div class="specs">${p.specs.map(s=>`<span>${dot}${s}</span>`).join('')}</div>
+     <span class="more">Ver fotos e detalhes →</span>
+    </div>
+   </button>`).join('')||'<p style="color:var(--muted)">Nenhum imóvel nesta categoria no momento.</p>';
+  grid.querySelectorAll('.card').forEach(c=>c.onclick=()=>{location.hash=c.dataset.id;});
+}
+document.querySelectorAll('#tabs .chip').forEach(ch=>ch.onclick=()=>{
+  document.querySelectorAll('#tabs .chip').forEach(c=>c.classList.remove('active'));ch.classList.add('active');filtro=ch.dataset.f;render();});
+document.getElementById('sort').onchange=e=>{ordem=e.target.value;render();};
+
+const sheet=document.getElementById('sheet'),slides=document.getElementById('slides'),thumbs=document.getElementById('thumbs'),gcount=document.getElementById('gcount');
+let atual=null;
+function abrir(p){
+  atual=p;
+  document.getElementById('sTitle').textContent=p.nome;
+  slides.innerHTML=Array.from({length:p.n},(_,i)=>`<img src="${img(p,i+1)}" alt="${p.nome}, foto ${i+1}" ${i>1?'loading="lazy"':''}>`).join('');
+  thumbs.innerHTML=Array.from({length:p.n},(_,i)=>`<img src="${img(p,i+1)}" alt="" data-i="${i}" loading="lazy">`).join('');
+  thumbs.querySelectorAll('img').forEach(t=>t.onclick=()=>ir(+t.dataset.i));
+  const off=p.de?Math.round((1-p.preco/p.de)*100):0;
+  document.getElementById('detail').innerHTML=`
+   <p class="eyebrow">${p.tipo==='casa'?'Casa':'Apartamento'} · pronto para morar</p>
+   <h2>${p.nome}</h2>
+   <div class="loc">${pin}${p.bairro}</div>
+   <div class="pbox"><div>${p.de?`<span class="old">De ${brl(p.de)}</span><br>`:''}<span class="price">${p.de?'por ':''}${brl(p.preco)}</span></div>${off?`<span class="save">${brl(p.de-p.preco)} abaixo do valor anterior</span>`:''}</div>
+   <div class="facts">${p.facts.map(f=>`<div class="fact"><b>${f[0]}</b><span>${f[1]}</span></div>`).join('')}</div>
+   <p class="intro">${p.intro}</p>
+   ${p.grupos.map(g=>`<h4>${g[0]}</h4><ul class="bul">${g[1].map(x=>`<li>${x}</li>`).join('')}</ul>`).join('')}
+   ${p.nota?`<p class="note">${p.nota}</p>`:''}
+   <div class="cta-row">
+    <a class="btn btn-wa" href="${msg(p)}" target="_blank" rel="noopener">Quero saber mais</a>
+    <a class="btn btn-ghost" href="https://www.google.com/maps/search/${encodeURIComponent(p.mapa)}" target="_blank" rel="noopener">Ver região no mapa</a>
+   </div>
+   <div class="sig"><b>Thiago Oliveira</b><p>Corretor de Imóveis · MyBroker · CRECI-GO 105.575E · (62) 98270-9212</p><p style="font-style:italic;margin-top:12px">“Se eu achar que o negócio não é bom para você, eu vou te falar.”</p></div>`;
+  document.getElementById('dName').textContent=p.nome;
+  document.getElementById('dPrice').textContent=brl(p.preco);
+  document.getElementById('dWa').href=visita(p);
+  document.getElementById('fab').style.display='none';
+  sheet.classList.add('open');sheet.setAttribute('aria-hidden','false');document.body.classList.add('lock');
+  sheet.scrollTop=0;slides.scrollLeft=0;marcar(0);
+  document.title=p.nome+' | Thiago Oliveira';
+}
+function fechar(){
+  sheet.classList.remove('open');sheet.setAttribute('aria-hidden','true');document.body.classList.remove('lock');
+  document.getElementById('fab').style.display='';document.title='Imóveis prontos para morar | Thiago Oliveira';atual=null;
+}
+function ir(i){slides.scrollTo({left:i*slides.clientWidth,behavior:'smooth'});}
+function marcar(i){gcount.textContent=`${i+1} / ${atual?atual.n:0}`;thumbs.querySelectorAll('img').forEach((t,k)=>t.classList.toggle('on',k===i));
+  const t=thumbs.children[i];if(t)thumbs.scrollTo({left:t.offsetLeft-thumbs.clientWidth/2+38,behavior:'smooth'});}
+let st;slides.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>marcar(Math.round(slides.scrollLeft/slides.clientWidth)),60);},{passive:true});
+document.getElementById('prev').onclick=()=>ir(Math.max(0,Math.round(slides.scrollLeft/slides.clientWidth)-1));
+document.getElementById('next').onclick=()=>ir(Math.min(atual.n-1,Math.round(slides.scrollLeft/slides.clientWidth)+1));
+document.getElementById('close').onclick=()=>{history.pushState('',document.title,location.pathname);fechar();};
+document.addEventListener('keydown',e=>{if(!atual)return;if(e.key==='Escape')document.getElementById('close').click();if(e.key==='ArrowRight')document.getElementById('next').click();if(e.key==='ArrowLeft')document.getElementById('prev').click();});
+const toast=document.getElementById('toast');
+document.getElementById('share').onclick=async()=>{
+  const url=location.origin+location.pathname+'#'+atual.id;
+  const data={title:atual.nome,text:`${atual.nome} — ${brl(atual.preco)}`,url};
+  try{if(navigator.share){await navigator.share(data);return;}}catch(e){return;}
+  try{await navigator.clipboard.writeText(url);}catch(e){}
+  toast.classList.add('on');setTimeout(()=>toast.classList.remove('on'),1800);
+};
+function rota(){const id=location.hash.slice(1);const p=IMOVEIS.find(x=>x.id===id);if(p)abrir(p);else if(atual)fechar();}
+addEventListener('hashchange',rota);
+render();rota();
+</script>
+</body>
+</html>
