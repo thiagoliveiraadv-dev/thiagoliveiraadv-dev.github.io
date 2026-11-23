@@ -279,7 +279,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
         <input id="hq" type="search" placeholder="Busque: casa 3 suítes, studio, pronto para morar…" autocomplete="off" enterkeyhint="search">
         <button class="btn btn-green" type="submit">Buscar</button>
       </form>
-      <div class="hero-sug"><span>Mais procurados:</span><a href="#portfolio" data-busca="casa 3 suítes">Casa com 3 suítes</a><a href="#portfolio" data-busca="pronto para morar">Pronto para morar</a><a href="#portfolio" data-busca="2 quartos">2 quartos</a><a href="#portfolio" data-busca="studio">Studio para investir</a><a href="#portfolio" data-busca="lote">Lotes</a></div>
+      <div class="hero-sug"><span>Mais procurados:</span><a href="#portfolio" data-busca="casa 3 suítes">Casa com 3 suítes</a><a href="#portfolio" data-busca="pronto para morar">Pronto para morar</a><a href="#portfolio" data-busca="2 quartos">2 quartos</a><a href="#portfolio" data-busca="studio">Studio para investir</a><a href="#portfolio" data-busca="até 300 mil">Até 300 mil</a><a href="#portfolio" data-busca="lote">Lotes</a></div>
       <div class="hero-cta">
         <a class="btn btn-green" href="#portfolio">Explorar empreendimentos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-ghost" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Quero%20uma%20consultoria%20sobre%20im%C3%B3veis%20em%20Goi%C3%A2nia." target="_blank" rel="noopener">Falar agora</a>
@@ -349,18 +349,19 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
       <label class="busca-lbl" for="q">O que você procura?</label>
       <div class="busca-campo">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input id="q" type="search" placeholder="Ex.: casa com 3 suítes, apartamento pronto no Setor Bueno" autocomplete="off" enterkeyhint="search">
+        <input id="q" type="search" placeholder="Ex.: casa com 3 suítes, apartamento de 500 a 700 mil no Setor Bueno" autocomplete="off" enterkeyhint="search">
         <button type="button" class="busca-x" id="q-x" hidden>Limpar</button>
       </div>
       <div class="frows">
         <div class="frow" data-g="tipo"><span class="frow-lbl">Tipo</span><button class="chip active" data-v="">Todos</button><button class="chip" data-v="apto">Apartamentos</button><button class="chip" data-v="casa">Casas</button><button class="chip" data-v="lote">Lotes e chácaras</button><button class="chip" data-v="sala">Salas comerciais</button></div>
         <div class="frow" data-g="q"><span class="frow-lbl">Quartos</span><button class="chip active" data-v="">Todos</button><button class="chip" data-v="1">Studio e 1</button><button class="chip" data-v="2">2</button><button class="chip" data-v="3">3</button><button class="chip" data-v="4">4 ou mais</button></div>
         <div class="frow" data-g="st"><span class="frow-lbl">Situação</span><button class="chip active" data-v="">Todos</button><button class="chip" data-v="pronto">Pronto para morar</button><button class="chip" data-v="planta">Na planta e em obras</button></div>
+        <div class="frow" data-g="v"><span class="frow-lbl">Valor</span><button class="chip active" data-v="">Todos</button><button class="chip" data-v="0-200000">Até 200 mil</button><button class="chip" data-v="200000-350000">200 a 350 mil</button><button class="chip" data-v="350000-500000">350 a 500 mil</button><button class="chip" data-v="500000-700000">500 a 700 mil</button><button class="chip" data-v="700000-1000000">700 mil a 1 mi</button><button class="chip" data-v="1000000-2000000">1 a 2 mi</button><button class="chip" data-v="2000000-">Acima de 2 mi</button><button class="chip active" data-v="custom" id="v-custom" hidden></button></div>
       </div>
       <p class="busca-res" id="res" aria-live="polite"></p>
     </div>
     <div class="grid" id="grid">
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="1 2 3" data-st="planta">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="1 2 3" data-st="planta" data-vmin="239000" data-vmax="579000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/logic-modern-life/" target="_blank" rel="noopener" aria-label="Logic Modern Life"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/logic-modern-life.jpg" alt="Logic Modern Life"><span class="card-badge">Somos</span></div>
         <div class="card-body">
@@ -370,7 +371,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver app do empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto" data-vmin="689000" data-vmax="1979500">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/lago-areiao/" target="_blank" rel="noopener" aria-label="Lago Areião"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/lago-areiao.jpg" alt="Lago Areião"><span class="card-badge">CMO</span></div>
         <div class="card-body">
@@ -380,7 +381,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver app do empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto" data-vmin="559000" data-vmax="1400000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/ilumi-bueno/" target="_blank" rel="noopener" aria-label="ILUMI Bueno Residências"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/ilumi-bueno.jpg" alt="ILUMI Bueno Residências"><span class="card-badge">CMO</span></div>
         <div class="card-body">
@@ -430,7 +431,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2" data-st="planta">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2" data-st="planta" data-vmin="423344" data-vmax="451000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/now-111/" target="_blank" rel="noopener" aria-label="Now 111"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/now-111.jpg" alt="Now 111"><span class="card-badge">EBM</span></div>
         <div class="card-body">
@@ -460,7 +461,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Casas &amp; Condomínios" data-tipo="casa" data-q="3" data-st="planta">
+      <article class="card reveal" data-cat="Casas &amp; Condomínios" data-tipo="casa" data-q="3" data-st="planta" data-vmin="1250000" data-vmax="1700000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/surya-by-palme/" target="_blank" rel="noopener" aria-label="Surya By Palme - Lançamento"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/placeholder.jpg" alt="Surya By Palme - Lançamento"><span class="card-badge">PALME</span></div>
         <div class="card-body">
@@ -550,7 +551,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="planta">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="planta" data-vmin="635000" data-vmax="979000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/una-areiao/" target="_blank" rel="noopener" aria-label="Una Areião"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/una-areiao.jpg" alt="Una Areião"><span class="card-badge">CMO</span></div>
         <div class="card-body">
@@ -610,7 +611,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="sala" data-q="" data-st="">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="sala" data-q="" data-st="" data-vmin="725067" data-vmax="725067">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Quero%20saber%20mais%20sobre%20o%20empreendimento%20Pateo%20136%20Opus." target="_blank" rel="noopener" aria-label="Pateo 136 Opus"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/placeholder.jpg" alt="Pateo 136 Opus"><span class="card-badge">OPUS</span></div>
         <div class="card-body">
@@ -620,7 +621,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="planta">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="planta" data-vmin="941000" data-vmax="941000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/bioma-wellness-life/" target="_blank" rel="noopener" aria-label="Bioma Wellness Life"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/bioma-wellness-life.jpg" alt="Bioma Wellness Life"><span class="card-badge">WV Maldi</span></div>
         <div class="card-body">
@@ -630,7 +631,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto sala" data-q="1 2" data-st="planta">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto sala" data-q="1 2" data-st="planta" data-vmin="363770" data-vmax="1341528">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/euro-towers/" target="_blank" rel="noopener" aria-label="Euro Towers"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/euro-towers.jpg" alt="Euro Towers"><span class="card-badge">EURO</span></div>
         <div class="card-body">
@@ -640,7 +641,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver app do empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="3" data-st="planta">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="3" data-st="planta" data-vmin="1471024" data-vmax="1471024">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Quero%20saber%20mais%20sobre%20o%20empreendimento%20Parque%20El%20Retiro." target="_blank" rel="noopener" aria-label="Parque El Retiro"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/placeholder.jpg" alt="Parque El Retiro"><span class="card-badge">EURO</span></div>
         <div class="card-body">
@@ -650,7 +651,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="" data-st="pronto">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="" data-st="pronto" data-vmin="1150386" data-vmax="1545075">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Quero%20saber%20mais%20sobre%20o%20empreendimento%20Parque%20Noronha." target="_blank" rel="noopener" aria-label="Parque Noronha"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/placeholder.jpg" alt="Parque Noronha"><span class="card-badge">EURO</span></div>
         <div class="card-body">
@@ -730,7 +731,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Conhecer o empreendimento <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Lotes &amp; Chácaras" data-tipo="lote" data-q="" data-st="">
+      <article class="card reveal" data-cat="Lotes &amp; Chácaras" data-tipo="lote" data-q="" data-st="" data-vmin="98700" data-vmax="105000">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Quero%20saber%20mais%20sobre%20o%20empreendimento%20Reserva%20do%20Parque." target="_blank" rel="noopener" aria-label="Reserva do Parque"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/placeholder.jpg" alt="Reserva do Parque"><span class="card-badge">CEPACOL [LEANDRO]</span></div>
         <div class="card-body">
@@ -740,7 +741,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto" data-vmin="598000" data-vmax="767000">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Quero%20saber%20mais%20sobre%20o%20empreendimento%20Jard%C3%A3." target="_blank" rel="noopener" aria-label="Jardã"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/placeholder.jpg" alt="Jardã"><span class="card-badge">PALME</span></div>
         <div class="card-body">
@@ -750,7 +751,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="" data-vmin="569000" data-vmax="569000">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Quero%20saber%20mais%20sobre%20o%20empreendimento%2015W22." target="_blank" rel="noopener" aria-label="15W22"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/placeholder.jpg" alt="15W22"><span class="card-badge">GPE</span></div>
         <div class="card-body">
@@ -790,7 +791,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto">
+      <article class="card reveal" data-cat="Apartamentos" data-tipo="apto" data-q="2 3" data-st="pronto" data-vmin="549000" data-vmax="1550000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/viverde-areiao/" target="_blank" rel="noopener" aria-label="Viverde Areião"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/viverde-areiao.jpg" alt="Viverde Areião"><span class="card-badge">CMO</span></div>
         <div class="card-body">
@@ -915,7 +916,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
       <p>Captações exclusivas e revendas escolhidas a dedo — do apartamento pronto para morar à casa de alto padrão.</p>
     </div>
     <div class="grid">
-      <article class="card reveal" data-tipo="casa" data-q="4" data-st="pronto">
+      <article class="card reveal" data-tipo="casa" data-q="4" data-st="pronto" data-vmin="4790000" data-vmax="4790000">
         <a class="card-a" href="imoveis-prontos/#sobrado-jardins-franca" aria-label="Sobrado no Jardins França"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/sobrado-jardins-franca.jpg" alt="Sobrado no Jardins França"><span class="card-tag">Alto padrão</span></div>
         <div class="card-body">
@@ -925,7 +926,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver fotos e detalhes <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="apto" data-q="3" data-st="pronto">
+      <article class="card reveal" data-tipo="apto" data-q="3" data-st="pronto" data-vmin="1890000" data-vmax="1890000">
         <a class="card-a" href="imoveis-prontos/#finest-bueno-1702" aria-label="Finest Bueno · 17º andar"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/finest-bueno-1702.jpg" alt="Finest Bueno · 17º andar"><span class="card-tag">Nunca habitado</span></div>
         <div class="card-body">
@@ -935,7 +936,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver fotos e detalhes <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto">
+      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto" data-vmin="1050000" data-vmax="1050000">
         <a class="card-a" href="imoveis-prontos/#copas-do-bosque" aria-label="Residencial Copas do Bosque"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/copas-do-bosque.jpg" alt="Residencial Copas do Bosque"><span class="card-tag">Nunca habitado</span></div>
         <div class="card-body">
@@ -945,7 +946,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver fotos e detalhes <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="apto" data-q="3" data-st="pronto">
+      <article class="card reveal" data-tipo="apto" data-q="3" data-st="pronto" data-vmin="599900" data-vmax="599900">
         <a class="card-a" href="imoveis-prontos/#dilce-ribeiro" aria-label="Residencial Dilce Ribeiro"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/dilce-ribeiro.jpg" alt="Residencial Dilce Ribeiro"><span class="card-tag">Mobiliado</span></div>
         <div class="card-body">
@@ -955,7 +956,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver fotos e detalhes <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="apto" data-q="2" data-st="pronto">
+      <article class="card reveal" data-tipo="apto" data-q="2" data-st="pronto" data-vmin="210000" data-vmax="210000">
         <a class="card-a" href="imoveis-prontos/#leste-universitario" aria-label="Apartamento no Leste Universitário"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/leste-universitario.jpg" alt="Apartamento no Leste Universitário"><span class="card-tag">Para investir</span></div>
         <div class="card-body">
@@ -965,7 +966,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Ver fotos e detalhes <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto">
+      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto" data-vmin="330000" data-vmax="330000">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Tenho%20interesse%20no%20im%C3%B3vel%20Bela%20Vista%20Residence." ></a>
         <div class="card-img" style="display:grid;place-items:center;background:var(--green)"><span style="font-family:var(--serif);color:#fff;font-size:40px;opacity:.6">B</span></div>
         <div class="card-body">
@@ -975,7 +976,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto">
+      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto" data-vmin="820000" data-vmax="820000">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Tenho%20interesse%20no%20im%C3%B3vel%20Borges%20Landeiro%20Athenas." ></a>
         <div class="card-img" style="display:grid;place-items:center;background:var(--green)"><span style="font-family:var(--serif);color:#fff;font-size:40px;opacity:.6">B</span></div>
         <div class="card-body">
@@ -985,7 +986,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="casa" data-q="" data-st="pronto">
+      <article class="card reveal" data-tipo="casa" data-q="" data-st="pronto" data-vmin="1490000" data-vmax="1490000">
         <a class="card-a" href="https://thiagoliveiraadv-dev.github.io/casa-parqville-jacaranda/" target="_blank" rel="noopener"></a>
         <div class="card-img"><img loading="lazy" src="assets/thumbs/casa-parqville-jacaranda.jpg" alt="Casa Parqville Jacarandá"><span class="card-tag">Valor reduzido</span></div>
         <div class="card-body">
@@ -1005,7 +1006,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
           <span class="card-link">Falar com o Thiago <span class="arw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
         </div>
       </article>
-      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto">
+      <article class="card reveal" data-tipo="apto" data-q="" data-st="pronto" data-vmin="550000" data-vmax="550000">
         <a class="card-a" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Tenho%20interesse%20no%20im%C3%B3vel%20Residencial%20Reserva%20do%20Amaz%C3%B4nia." ></a>
         <div class="card-img" style="display:grid;place-items:center;background:var(--green)"><span style="font-family:var(--serif);color:#fff;font-size:40px;opacity:.6">R</span></div>
         <div class="card-body">
@@ -1105,11 +1106,12 @@ todos.forEach(c=>{
   const st=c.dataset.st;
   if(st){const im=c.querySelector('.card-img');if(im){const b=document.createElement('span');b.className='card-st '+st;b.textContent=st==='pronto'?'Pronto para morar':'Na planta';im.appendChild(b);}}
 });
-const F={tipo:'',q:'',st:''};
+const F={tipo:'',q:'',st:'',v:'',vmin:null,vmax:null};
 const qIn=document.getElementById('q'),qX=document.getElementById('q-x'),res=document.getElementById('res'),vazio=document.getElementById('vazio'),vazioWa=document.getElementById('vazio-wa');
 const STOP=new Set('com de do da dos das no na nos nas em para pra um uma uns umas que e ou o a os as ate perto proximo quero procuro procurando busco imovel imoveis goiania go setor bairro regiao suite suites quarto quartos dormitorio dormitorios mais'.split(' '));
 function interpretar(raw){
   let s=' '+norm(raw)+' ';const r={};
+  const lv=lerValor(s);if(lv.r){r.v=lv.r;}s=lv.s;
   const mq=s.match(/(\d)\s*(?:\/\s*4|q\b|qts?\b|quartos?|suites?|dormitorios?|dorms?)/);
   if(mq){const n=Math.min(+mq[1],4);r.q=n<1?'1':String(n);s=s.replace(mq[0],' ');}
   if(/\b(studios?|stud|kit ?net|kitnet|compactos?|loft)\b/.test(s)){r.q=r.q||'1';s=s.replace(/\b(studios?|kit ?net|kitnet|compactos?|loft)\b/g,' ');}
@@ -1123,6 +1125,38 @@ function interpretar(raw){
   return r;
 }
 function marcar(g,v){F[g]=v;document.querySelectorAll(`.frow[data-g="${g}"] .chip`).forEach(c=>{const on=c.dataset.v===v;c.classList.toggle('active',on);c.setAttribute('aria-pressed',on);});}
+
+const vCustom=document.getElementById('v-custom');
+const fmtV=n=>n>=1e6?(Math.round(n/1e5)/10).toString().replace('.',',')+' mi':Math.round(n/1e3)+' mil';
+function valorDe(num,un){
+  let n;
+  if(un==='mi'||un==='mm'||(un&&/^milh/.test(un))){n=parseFloat(num.replace(/\./g,'').replace(',','.'))*1e6;}
+  else if(un==='mil'||un==='k'){n=parseFloat(num.replace(/\./g,'').replace(',','.'))*1e3;}
+  else{n=parseFloat(num.replace(/[.,](?=\d{3}\b)/g,'').replace(',','.'));}
+  return isNaN(n)?null:n;
+}
+function lerValor(s){
+  s=s.replace(/r\$\s*/g,' ');
+  const N='(\\d+(?:[.,]\\d+)*)',U='\\s*(mil|k|milhoes|milhao|mi|mm)?\\b';
+  let m,r=null;
+  if((m=s.match(new RegExp('(?:de|entre|dos|das)?\\s*'+N+U+'\\s*(?:a|e|ate|-)\\s*'+N+U)))&&(m[2]||m[4]||+m[1].replace(/\D/g,'')>=1000)){
+    const u2=m[4]||m[2],u1=m[2]||m[4];const a=valorDe(m[1],u1),b=valorDe(m[3],u2);
+    if(a&&b&&Math.max(a,b)>=1e4)r=[Math.min(a,b),Math.max(a,b)];
+  }
+  if(!r&&(m=s.match(new RegExp('(?:ate|menos de|abaixo de|maximo|max|no maximo)\\s*'+N+U)))){const v=valorDe(m[1],m[2]);if(v>=1e4)r=[0,v];}
+  if(!r&&(m=s.match(new RegExp('(?:acima de|mais de|a partir de|minimo|partir de)\\s*'+N+U)))){const v=valorDe(m[1],m[2]);if(v>=1e4)r=[v,Infinity];}
+  if(!r&&(m=s.match(new RegExp(N+'\\s*(mil|k|milhoes|milhao|mi|mm)\\b')))){const v=valorDe(m[1],m[2]);if(v>=1e4)r=[v*0.8,v*1.2];}
+  if(!r&&(m=s.match(/(\d{1,3}(?:\.\d{3})+|\d{5,})(?:,\d+)?/))){const v=valorDe(m[1],'');if(v>=1e4)r=[v*0.8,v*1.2];}
+  if(r&&m)s=s.replace(m[0],' ');
+  return {r,s};
+}
+function marcarValor(a,b){
+  F.vmin=a;F.vmax=b;let k='';
+  if(a!=null){const key=a+'-'+(b===Infinity?'':b);const preset=document.querySelector(`.frow[data-g="v"] .chip[data-v="${key}"]`);k=preset?key:'custom';
+    if(k==='custom'){vCustom.textContent=(a<=0?'Até '+fmtV(b):b===Infinity?'Acima de '+fmtV(a):fmtV(a)+' a '+fmtV(b));}}
+  vCustom.hidden=k!=='custom';F.v=k;
+  document.querySelectorAll('.frow[data-g="v"] .chip').forEach(c=>{const on=c.dataset.v===k;c.classList.toggle('active',on);c.setAttribute('aria-pressed',on);});
+}
 let palavras=[];
 const SIN={cobertura:['cobertura','penthouse'],penthouse:['penthouse','cobertura'],coberturas:['cobertura','penthouse'],condominio:['condominio','condominios'],investir:['investi','locacao','short','rentabilidade','studio'],investimento:['investi','locacao','short','rentabilidade','studio']};
 function aplicar(){
@@ -1131,11 +1165,12 @@ function aplicar(){
     const ok=(!F.tipo||c.dataset.tipo.split(' ').includes(F.tipo))
       &&(!F.q||c.dataset.q.split(' ').includes(F.q))
       &&(!F.st||c.dataset.st===F.st)
+      &&(F.vmin==null||(c.dataset.vmin&&+c.dataset.vmin<=F.vmax&&+c.dataset.vmax>=F.vmin))
       &&palavras.every(w=>(SIN[w]||[w]).some(x=>c._txt.includes(x)));
     c.style.display=ok?'':'none';
     if(ok){c.classList.add('in');if(c.closest('#exclusivas'))nE++;else nP++;}
   });
-  const filtrando=F.tipo||F.q||F.st||palavras.length;
+  const filtrando=F.tipo||F.q||F.st||F.v||palavras.length;
   excl.hidden=!!filtrando&&nE===0;
   vazio.hidden=!(filtrando&&nP+nE===0);
   qX.hidden=!qIn.value;
@@ -1143,20 +1178,24 @@ function aplicar(){
   const partes=[];
   if(nP)partes.push(`<b>${nP}</b> ${nP>1?'empreendimentos':'empreendimento'}`);
   if(nE)partes.push(`<b>${nE}</b> ${nE>1?'imóveis':'imóvel'} de revenda <a href="#exclusivas">(ver abaixo)</a>`);
-  res.innerHTML=partes.length?'Encontrei '+partes.join(' e ')+'.'+(F.q?' Alguns lançamentos ainda não têm a planta divulgada e não entram no filtro de quartos.':''):'';
+  res.innerHTML=partes.length?'Encontrei '+partes.join(' e ')+'.'+(F.q?' Alguns lançamentos ainda não têm a planta divulgada e não entram no filtro de quartos.':'')+(F.v?' Valores de referência das tabelas mais recentes que recebi, sujeitos a alteração; empreendimentos sem tabela divulgada não entram no filtro de valor.':''):'';
   if(!partes.length)res.textContent='';
   vazioWa.href='https://wa.me/5562982709212?text='+encodeURIComponent('Olá, Thiago! Vim pelo seu site e procuro: '+(qIn.value||'um imóvel')+'. Pode me ajudar?');
 }
 function buscar(txt){
   const r=interpretar(txt);
   ['tipo','q','st'].forEach(g=>{if(r[g])marcar(g,r[g]);});
+  if(r.v)marcarValor(r.v[0],r.v[1]);
   palavras=r.palavras;aplicar();
 }
-let tmr;qIn.addEventListener('input',()=>{clearTimeout(tmr);tmr=setTimeout(()=>{if(!qIn.value){palavras=[];['tipo','q','st'].forEach(g=>marcar(g,''));aplicar();}else buscar(qIn.value);},220);});
+let tmr;qIn.addEventListener('input',()=>{clearTimeout(tmr);tmr=setTimeout(()=>{if(!qIn.value){palavras=[];['tipo','q','st'].forEach(g=>marcar(g,''));marcarValor(null,null);aplicar();}else buscar(qIn.value);},220);});
 qIn.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();buscar(qIn.value);}});
-qX.addEventListener('click',()=>{qIn.value='';palavras=[];['tipo','q','st'].forEach(g=>marcar(g,''));aplicar();qIn.focus();});
-document.querySelectorAll('.frow .chip').forEach(c=>{c.setAttribute('aria-pressed',c.classList.contains('active'));c.addEventListener('click',()=>{marcar(c.closest('.frow').dataset.g,c.dataset.v);aplicar();});});
-function irBusca(txt){qIn.value=txt;['tipo','q','st'].forEach(g=>marcar(g,''));buscar(txt);document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});}
+qX.addEventListener('click',()=>{qIn.value='';palavras=[];['tipo','q','st'].forEach(g=>marcar(g,''));marcarValor(null,null);aplicar();qIn.focus();});
+document.querySelectorAll('.frow .chip').forEach(c=>{c.setAttribute('aria-pressed',c.classList.contains('active'));c.addEventListener('click',()=>{const g=c.closest('.frow').dataset.g;
+  if(g==='v'){if(c.dataset.v==='custom')return;if(!c.dataset.v)marcarValor(null,null);else{const[a,b]=c.dataset.v.split('-');marcarValor(+a,b?+b:Infinity);}}
+  else marcar(g,c.dataset.v);aplicar();});});
+marcarValor(null,null);
+function irBusca(txt){qIn.value=txt;['tipo','q','st'].forEach(g=>marcar(g,''));marcarValor(null,null);buscar(txt);document.getElementById('portfolio').scrollIntoView({behavior:'smooth'});}
 document.getElementById('hero-busca').addEventListener('submit',e=>{e.preventDefault();irBusca(document.getElementById('hq').value);});
 document.querySelectorAll('[data-busca]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();irBusca(a.dataset.busca);}));
 // reveal — à prova de falhas: nada pode ficar preso invisível (saltos de âncora, scroll rápido)
