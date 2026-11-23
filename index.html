@@ -169,6 +169,30 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
 .card-st.planta{background:var(--paper2);color:var(--ink)}
 @media(max-width:640px){.busca{padding:20px 16px}.frow-lbl{width:100%}.hero-busca{padding-left:16px}.hero-busca .btn{padding:12px 16px}}
 
+[hidden]{display:none!important}
+/* AGENDA */
+.agenda{background:var(--green-soft);padding:80px 0}
+.ag-lista{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
+.ag-card{background:var(--paper2);border:1px solid var(--line2);border-radius:var(--r);display:grid;grid-template-columns:92px minmax(0,1fr);overflow:hidden;box-shadow:var(--shadow)}
+.ag-data{background:var(--green);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 8px;text-align:center;gap:2px}
+.ag-data .dia{font-family:var(--serif);font-size:44px;line-height:1;font-weight:600}
+.ag-data .mes{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--gold2)}
+.ag-data .sem{font-size:12px;opacity:.8}
+.ag-corpo{padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.ag-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ag-tipo{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:var(--green-soft);padding:5px 10px;border-radius:100px}
+.ag-quando{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--gold);padding:5px 10px;border-radius:100px}
+.ag-corpo h3{font-family:var(--serif);font-size:23px;margin:0;color:var(--ink);line-height:1.2}
+.ag-info{font-size:14px;color:var(--ink2);display:flex;flex-direction:column;gap:3px}
+.ag-info span{display:flex;align-items:center;gap:7px}
+.ag-info svg{color:var(--gold);flex:none}
+.ag-corpo p{margin:0;font-size:14px;color:var(--muted)}
+.ag-acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.ag-acoes .btn{padding:10px 16px;font-size:13px}
+.ag-vazio{background:var(--paper2);border:1px dashed var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.ag-vazio p{margin:0;color:var(--ink2);max-width:60ch}
+@media(max-width:640px){.agenda{padding:56px 0}.ag-lista{grid-template-columns:1fr}.ag-card{grid-template-columns:76px minmax(0,1fr)}.ag-data .dia{font-size:36px}}
+
 /* EXCLUSIVAS */
 .excl{background:var(--sand)}
 .excl .grid{grid-template-columns:repeat(3,1fr)}
@@ -257,6 +281,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
       <span><b>Dr. Thiago</b><small>Corretor &amp; Advogado</small></span>
     </a>
     <div class="nav-links">
+      <a href="#agenda">Agenda</a>
       <a href="#portfolio">Empreendimentos</a>
       <a href="imoveis-prontos/">Prontos para morar</a>
       <a href="#exclusivas">Exclusivas</a>
@@ -337,6 +362,36 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
     <div class="stat"><b>Goiânia</b><span>Foco na capital e região</span></div>
   </div>
 </section>
+
+<section class="section agenda" id="agenda">
+  <div class="wrap">
+    <div class="section-head reveal in">
+      <p class="eyebrow">Agenda</p>
+      <h2>Onde me encontrar</h2>
+      <p>Plantões, lançamentos, rodadas de negócios e eventos das incorporadoras. Passe para conhecer os empreendimentos de perto, ou me avise que eu separo um horário para você.</p>
+    </div>
+    <div class="ag-lista" id="ag-lista"></div>
+    <div class="ag-vazio" id="ag-vazio" hidden>
+      <p>Nenhum evento marcado para os próximos dias. Quer conhecer um empreendimento ou visitar um decorado? Eu agendo com você.</p>
+      <a class="btn btn-green" href="https://wa.me/5562982709212?text=Ol%C3%A1%2C%20Thiago%21%20Vi%20sua%20agenda%20no%20site%20e%20quero%20marcar%20uma%20visita." target="_blank" rel="noopener">Agendar uma visita</a>
+    </div>
+  </div>
+</section>
+<!-- AGENDA:INICIO (atualizado pela tarefa sync-agenda-site; só eventos imobiliários) -->
+<script type="application/json" id="agenda-dados">
+[
+ {
+  "id": "7jhc4m0bvm44f71omb1hf7ttn8",
+  "inicio": "2026-11-24T12:50:00-03:00",
+  "fim": "2026-11-24T19:00:00-03:00",
+  "tipo": "Plantão",
+  "titulo": "Plantão de vendas · Euro Incorporações",
+  "local": "Marista – Goiânia/GO",
+  "detalhe": "Estarei no plantão para apresentar os empreendimentos da Euro, como o Euro Towers, e tirar suas dúvidas. Passe para um café."
+ }
+]
+</script>
+<!-- AGENDA:FIM -->
 
 <section class="section" id="portfolio">
   <div class="wrap">
@@ -1097,6 +1152,35 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacin
 // nav shadow
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>12));
+// agenda de eventos (dados no bloco agenda-dados)
+(function(){
+  let ev=[];try{ev=JSON.parse(document.getElementById('agenda-dados').textContent)}catch(e){}
+  const agora=new Date();
+  const hoje0=new Date(agora.getFullYear(),agora.getMonth(),agora.getDate());
+  ev=ev.filter(e=>new Date(e.fim||e.inicio)>=agora).sort((a,b)=>new Date(a.inicio)-new Date(b.inicio)).slice(0,8);
+  const lista=document.getElementById('ag-lista'),vazio=document.getElementById('ag-vazio');
+  if(!ev.length){vazio.hidden=false;return;}
+  const MES=['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'],SEM=['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+  const hm=d=>d.toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit',timeZone:'America/Sao_Paulo'});
+  const esc=s=>(s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  lista.innerHTML=ev.map(e=>{
+    const i=new Date(e.inicio),f=e.fim?new Date(e.fim):null;
+    const dia0=new Date(i.getFullYear(),i.getMonth(),i.getDate());const dd=Math.round((dia0-hoje0)/864e5);
+    const quando=i<=agora&&f&&f>=agora?'Acontecendo agora':dd===0?'Hoje':dd===1?'Amanhã':'';
+    const horario=e.diaInteiro?'Dia inteiro':hm(i)+(f?' às '+hm(f):'');
+    const dataTxt=i.toLocaleDateString('pt-BR',{day:'2-digit',month:'2-digit',timeZone:'America/Sao_Paulo'});
+    const wa='https://wa.me/5562982709212?text='+encodeURIComponent(`Olá, Thiago! Vi no seu site: ${e.titulo} (${dataTxt}, ${horario}). Quero ir / saber mais.`);
+    const mapa=e.local?'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(e.local):'';
+    return `<article class="ag-card">
+      <div class="ag-data"><span class="dia">${String(i.getDate()).padStart(2,'0')}</span><span class="mes">${MES[i.getMonth()]}</span><span class="sem">${SEM[i.getDay()]}</span></div>
+      <div class="ag-corpo">
+        <div class="ag-top"><span class="ag-tipo">${esc(e.tipo)}</span>${quando?`<span class="ag-quando">${quando}</span>`:''}</div>
+        <h3>${esc(e.titulo)}</h3>
+        <div class="ag-info"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="14" height="14"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> ${horario}</span>${e.local?`<span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="14" height="14"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11Z"/><circle cx="12" cy="10" r="2.4"/></svg> ${esc(e.local)}</span>`:''}</div>
+        ${e.detalhe?`<p>${esc(e.detalhe)}</p>`:''}
+        <div class="ag-acoes"><a class="btn btn-green" href="${wa}" target="_blank" rel="noopener">Quero ir</a>${mapa?`<a class="btn btn-ghost" href="${mapa}" target="_blank" rel="noopener">Ver no mapa</a>`:''}</div>
+      </div></article>`;}).join('');
+})();
 // busca e filtros
 const norm=s=>(s||'').toString().normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const todos=[...document.querySelectorAll('#grid .card, #exclusivas .card')];
